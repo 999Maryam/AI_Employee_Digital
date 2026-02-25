@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-02-09T20:51:02.553518",
+  "session_id": "663a2878a65a9498",
+  "actor": "AI_Employee",
+  "action": "workflow_execution",
+  "target": "expense_approval",
+  "status": "success",
+  "approval_status": "not_required",
+  "details": {
+    "event": "expense_recorded",
+    "actions_executed": 2
+  },
+  "error": null,
+  "duration_ms": 74,
+  "security_level": "internal"
+}

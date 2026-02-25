@@ -1,0 +1,53 @@
+{
+  "enabled": true,
+  "max_iterations": 10,
+  "strict_mode": false,
+  "require_explicit_completion": true,
+  "check_criteria": [
+    "files_created",
+    "tasks_completed",
+    "explicit_done_statement",
+    "needs_action_empty",
+    "dashboard_updated"
+  ],
+  "safety_limits": {
+    "max_iterations": 10,
+    "max_runtime_minutes": 60,
+    "require_progress": true
+  },
+  "completion_keywords": {
+    "strong": [
+      "task complete",
+      "all done",
+      "finished successfully",
+      "completed successfully",
+      "mission accomplished",
+      "everything is done"
+    ],
+    "weak": [
+      "done",
+      "finished",
+      "completed",
+      "ready",
+      "success"
+    ],
+    "incomplete": [
+      "error",
+      "failed",
+      "need to",
+      "should do",
+      "next step",
+      "waiting for",
+      "not yet",
+      "still need",
+      "TODO",
+      "pending",
+      "in progress"
+    ]
+  },
+  "logging": {
+    "enabled": true,
+    "log_file": "Logs/autonomy_iterations.md",
+    "retention_days": 90
+  }
+}

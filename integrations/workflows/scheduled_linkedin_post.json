@@ -1,0 +1,27 @@
+{
+  "workflow_id": "scheduled_linkedin_post",
+  "name": "Scheduled LinkedIn Post",
+  "description": "Post to LinkedIn at scheduled time (triggered by calendar event)",
+  "trigger_event": "calendar_event",
+  "trigger_condition": "event['data'].get('event_type') == 'linkedin_post'",
+  "enabled": true,
+  "created_at": "2026-02-09T18:30:00",
+  "actions": [
+    {
+      "action_type": "post_to_linkedin",
+      "parameters": {
+        "content": "{{event.data.post_content}}",
+        "visibility": "PUBLIC",
+        "image_path": "{{event.data.image_path}}"
+      },
+      "retry_count": 3
+    },
+    {
+      "action_type": "send_notification",
+      "parameters": {
+        "title": "LinkedIn Post Draft Created",
+        "message": "Scheduled LinkedIn post has been drafted.\n\nContent: {{event.data.post_content}}\n\nPlease approve in Pending_Approval folder."
+      }
+    }
+  ]
+}

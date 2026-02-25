@@ -1,0 +1,37 @@
+{
+  "workflow_id": "expense_approval",
+  "name": "Expense \u2192 Approval \u2192 Odoo",
+  "description": "Large expenses require approval before recording in Odoo",
+  "trigger_event": "expense_recorded",
+  "trigger_condition": "event['data'].get('amount', 0) > 500",
+  "actions": [
+    {
+      "action_type": "request_approval",
+      "parameters": {
+        "title": "Expense Approval Required",
+        "description": "Expense: {{event.data.name}}\nAmount: ${{event.data.amount}}\nDate: {{event.data.date}}\n\nThis expense exceeds $500 and requires approval before recording in Odoo."
+      },
+      "condition": null,
+      "on_success": null,
+      "on_failure": null,
+      "retry_count": 3,
+      "timeout": 30
+    },
+    {
+      "action_type": "send_notification",
+      "parameters": {
+        "title": "Large Expense Detected",
+        "message": "Expense '{{event.data.name}}' (${{event.data.amount}}) requires your approval.\n\nCheck Pending_Approval folder."
+      },
+      "condition": null,
+      "on_success": null,
+      "on_failure": null,
+      "retry_count": 3,
+      "timeout": 30
+    }
+  ],
+  "enabled": true,
+  "created_at": "2026-02-09T18:30:00",
+  "last_executed": "2026-02-09T20:51:02.569371",
+  "execution_count": 1
+}

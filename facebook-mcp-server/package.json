@@ -1,0 +1,33 @@
+{
+  "name": "facebook-mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for Facebook automation",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "test": "DRY_RUN=true node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "facebook",
+    "social-media",
+    "automation",
+    "meta"
+  ],
+  "author": "AI Employee",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.0",
+    "axios": "^1.13.5",
+    "dotenv": "^16.6.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.11",
+    "typescript": "^5.9.3"
+  },
+  "types": "./dist/index.d.ts"
+}

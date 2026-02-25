@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "7372a6bcc2808c11",
+    "type": "split",
+    "children": [
+      {
+        "id": "0f442674b1355e74",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af423444091f9d16",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dab036b843b33cf8",
+    "type": "split",
+    "children": [
+      {
+        "id": "eaf0ab3f33881b79",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0bb951bca09fb0b7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e97d76014e127be8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "9e123d33a7d6f5c6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 215.5
+  },
+  "right": {
+    "id": "e73375e4b0eb2383",
+    "type": "split",
+    "children": [
+      {
+        "id": "a837b4ae61dd18de",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2f73b91805763390",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b9c016daca83fdc7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "1f4cd6e527d34055",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "846ce2391322450a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "e7e804fa4a746851",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "af423444091f9d16",
+  "lastOpenFiles": [
+    "Untitled 1.base",
+    "Untitled.base",
+    "facebook-mcp-server/README.md",
+    "odoo-mcp-server/README.md",
+    "Done/EMAIL_18eb9d36c22f2daf_processed.md",
+    "Done/EMAIL_18eb043e551e214b_processed.md",
+    "Done/FILE_test_drop.txt_processed.md",
+    "Plans/plan_EMAIL_discord_mentions.md",
+    "SETUP_GUIDE.md",
+    "Personal_AI_Employee_Hackathon.md",
+    "Dashboard.md",
+    "Watchers/gmail_watcher.py",
+    "Watchers",
+    "Rejected",
+    "Plans",
+    "Pending_Approval",
+    "Needs_Action",
+    "MCP_Servers",
+    "Logs",
+    "Welcome.md"
+  ]
+}

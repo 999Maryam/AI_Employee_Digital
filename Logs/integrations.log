@@ -1,0 +1,58 @@
+2026-02-09 20:49:15,237 - Orchestrator - INFO - Loaded workflow: Meeting Email → Calendar Event
+2026-02-09 20:49:15,250 - Orchestrator - INFO - Loaded workflow: Expense → Approval → Odoo
+2026-02-09 20:49:15,265 - Orchestrator - INFO - Loaded workflow: Invoice Created → Email Notification
+2026-02-09 20:49:15,281 - Orchestrator - INFO - Loaded workflow: Morning Automation Chain
+2026-02-09 20:49:15,301 - Orchestrator - INFO - Loaded workflow: Scheduled LinkedIn Post
+2026-02-09 20:49:15,302 - Orchestrator - INFO - Loaded 5 workflows
+2026-02-09 20:49:15,304 - Orchestrator - INFO - WorkflowOrchestrator initialized
+2026-02-09 20:49:15,305 - Orchestrator - INFO - Processing event: invoice_created from odoo_mcp
+2026-02-09 20:49:15,310 - Orchestrator - ERROR - Error evaluating condition 'event['data'].get('amount', 0) > 100': name 'event' is not defined
+2026-02-09 20:49:15,316 - Orchestrator - INFO - Processing event: email_received from gmail_watcher
+2026-02-09 20:49:15,317 - Orchestrator - ERROR - Error evaluating condition ''meeting' in event['data'].get('subject', '').lower() or 'appointment' in event['data'].get('subject', '').lower()': name 'event' is not defined
+2026-02-09 20:49:15,318 - Orchestrator - INFO - Processing event: expense_recorded from odoo_mcp
+2026-02-09 20:49:15,320 - Orchestrator - ERROR - Error evaluating condition 'event['data'].get('amount', 0) > 500': name 'event' is not defined
+2026-02-09 20:49:15,321 - Orchestrator - INFO - Processing event: scheduled_trigger from scheduler
+2026-02-09 20:49:15,322 - Orchestrator - ERROR - Error evaluating condition 'event['data'].get('trigger_time') == '08:00'': name 'event' is not defined
+2026-02-09 20:51:02,118 - Orchestrator - INFO - Loaded workflow: Meeting Email → Calendar Event
+2026-02-09 20:51:02,131 - Orchestrator - INFO - Loaded workflow: Expense → Approval → Odoo
+2026-02-09 20:51:02,147 - Orchestrator - INFO - Loaded workflow: Invoice Created → Email Notification
+2026-02-09 20:51:02,155 - Orchestrator - INFO - Loaded workflow: Morning Automation Chain
+2026-02-09 20:51:02,167 - Orchestrator - INFO - Loaded workflow: Scheduled LinkedIn Post
+2026-02-09 20:51:02,168 - Orchestrator - INFO - Loaded 5 workflows
+2026-02-09 20:51:02,169 - Orchestrator - INFO - WorkflowOrchestrator initialized
+2026-02-09 20:51:02,170 - Orchestrator - INFO - Processing event: invoice_created from odoo_mcp
+2026-02-09 20:51:02,184 - Orchestrator - INFO - Triggering workflow: Invoice Created → Email Notification
+2026-02-09 20:51:02,186 - Orchestrator - INFO - Executing workflow: Invoice Created → Email Notification
+2026-02-09 20:51:02,187 - Orchestrator - INFO - Executing action: send_notification
+2026-02-09 20:51:02,203 - Orchestrator - INFO - Sent notification: New Invoice Created
+2026-02-09 20:51:02,213 - Orchestrator - INFO - Executing action: send_email
+2026-02-09 20:51:02,214 - Orchestrator - INFO - Sending email to: customer@example.com
+2026-02-09 20:51:02,292 - Orchestrator - INFO - Workflow Invoice Created → Email Notification completed successfully
+2026-02-09 20:51:02,360 - Orchestrator - INFO - Processing event: email_received from gmail_watcher
+2026-02-09 20:51:02,363 - Orchestrator - INFO - Triggering workflow: Meeting Email → Calendar Event
+2026-02-09 20:51:02,364 - Orchestrator - INFO - Executing workflow: Meeting Email → Calendar Event
+2026-02-09 20:51:02,365 - Orchestrator - INFO - Executing action: create_calendar_event
+2026-02-09 20:51:02,366 - Orchestrator - INFO - Creating calendar event: Meeting next week
+2026-02-09 20:51:02,386 - Orchestrator - INFO - Executing action: send_notification
+2026-02-09 20:51:02,402 - Orchestrator - INFO - Sent notification: Calendar Event Draft Created
+2026-02-09 20:51:02,434 - Orchestrator - INFO - Workflow Meeting Email → Calendar Event completed successfully
+2026-02-09 20:51:02,466 - Orchestrator - INFO - Processing event: expense_recorded from odoo_mcp
+2026-02-09 20:51:02,474 - Orchestrator - INFO - Triggering workflow: Expense → Approval → Odoo
+2026-02-09 20:51:02,479 - Orchestrator - INFO - Executing workflow: Expense → Approval → Odoo
+2026-02-09 20:51:02,480 - Orchestrator - INFO - Executing action: request_approval
+2026-02-09 20:51:02,481 - Orchestrator - INFO - Requesting approval: Expense Approval Required
+2026-02-09 20:51:02,513 - Orchestrator - INFO - Executing action: send_notification
+2026-02-09 20:51:02,551 - Orchestrator - INFO - Sent notification: Large Expense Detected
+2026-02-09 20:51:02,568 - Orchestrator - INFO - Workflow Expense → Approval → Odoo completed successfully
+2026-02-09 20:51:02,584 - Orchestrator - INFO - Processing event: scheduled_trigger from scheduler
+2026-02-09 20:51:02,585 - Orchestrator - INFO - Triggering workflow: Morning Automation Chain
+2026-02-09 20:51:02,586 - Orchestrator - INFO - Executing workflow: Morning Automation Chain
+2026-02-09 20:51:02,587 - Orchestrator - INFO - Executing action: send_notification
+2026-02-09 20:51:02,617 - Orchestrator - INFO - Sent notification: Good Morning!
+2026-02-09 20:51:02,618 - Orchestrator - INFO - Executing action: wait
+2026-02-09 20:51:02,619 - Orchestrator - INFO - Waiting for 2 seconds
+2026-02-09 20:51:04,621 - Orchestrator - INFO - Executing action: create_file
+2026-02-09 20:51:04,654 - Orchestrator - INFO - Created file: /mnt/f/Maryam/Quarter_4/Ai_Employee_Vault/Inbox/MORNING_BRIEFING_{{event.data.date}}.md
+2026-02-09 20:51:04,656 - Orchestrator - INFO - Executing action: send_notification
+2026-02-09 20:51:04,693 - Orchestrator - INFO - Sent notification: Morning Routine Complete
+2026-02-09 20:51:04,719 - Orchestrator - INFO - Workflow Morning Automation Chain completed successfully

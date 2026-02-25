@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "description": "Audit log schema for AI Employee",
+  "retention_days": 90,
+  "fields": {
+    "timestamp": {
+      "type": "string",
+      "format": "ISO8601",
+      "description": "When the action occurred",
+      "required": true
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Session identifier for grouping related actions",
+      "required": true
+    },
+    "actor": {
+      "type": "string",
+      "description": "Who performed the action",
+      "required": true,
+      "examples": [
+        "AI_Employee",
+        "User",
+        "System",
+        "MCP_Server"
+      ]
+    },
+    "action": {
+      "type": "string",
+      "description": "What action was performed",
+      "required": true,
+      "examples": [
+        "create_file",
+        "modify_file",
+        "delete_file",
+        "send_email",
+        "post_linkedin",
+        "execute_command",
+        "approve_action",
+        "reject_action",
+        "authenticate"
+      ]
+    },
+    "target": {
+      "type": "string",
+      "description": "What was acted upon",
+      "required": true,
+      "examples": [
+        "file:Reports/briefing.md",
+        "email:user@domain.com",
+        "post:linkedin:123"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "description": "Result of the action",
+      "required": true,
+      "enum": [
+        "success",
+        "failure",
+        "pending",
+        "skipped"
+      ]
+    },
+    "approval_status": {
+      "type": "string",
+      "description": "Approval workflow status",
+      "required": false,
+      "enum": [
+        "approved",
+        "rejected",
+        "pending",
+        "not_required"
+      ]
+    },
+    "details": {
+      "type": "object",
+      "description": "Additional context about the action",
+      "required": false
+    },
+    "error": {
+      "type": "string",
+      "description": "Error message if status is failure",
+      "required": false
+    },
+    "duration_ms": {
+      "type": "integer",
+      "description": "How long the action took in milliseconds",
+      "required": false
+    },
+    "security_level": {
+      "type": "string",
+      "description": "Security classification of the action",
+      "required": false,
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted"
+      ]
+    }
+  }
+}

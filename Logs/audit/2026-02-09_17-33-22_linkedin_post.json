@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-02-09T17:33:22.630525",
+  "session_id": "4a21ac13febb4548",
+  "actor": "AI_Employee",
+  "action": "linkedin_post",
+  "target": "linkedin:123456",
+  "status": "success",
+  "approval_status": "approved",
+  "details": {},
+  "error": null,
+  "duration_ms": 1250,
+  "security_level": "confidential"
+}

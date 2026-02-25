@@ -1,0 +1,39 @@
+{
+  "workflow_id": "invoice_to_email",
+  "name": "Invoice Created \u2192 Email Notification",
+  "description": "When an invoice is created in Odoo, automatically send email notification to customer",
+  "trigger_event": "invoice_created",
+  "trigger_condition": "event['data'].get('amount', 0) > 100",
+  "actions": [
+    {
+      "action_type": "send_notification",
+      "parameters": {
+        "title": "New Invoice Created",
+        "message": "Invoice {{event.data.invoice_number}} for ${{event.data.amount}} has been created for customer {{event.data.customer_id}}"
+      },
+      "condition": null,
+      "on_success": null,
+      "on_failure": null,
+      "retry_count": 3,
+      "timeout": 30
+    },
+    {
+      "action_type": "send_email",
+      "parameters": {
+        "to": "{{event.data.customer_email}}",
+        "subject": "Invoice {{event.data.invoice_number}} - ${{event.data.amount}}",
+        "body": "Dear Customer,\n\nYour invoice {{event.data.invoice_number}} for ${{event.data.amount}} has been created.\n\nPlease review and process payment at your earliest convenience.\n\nThank you for your business!\n\nBest regards,\nAI Employee",
+        "priority": "normal"
+      },
+      "condition": "event['data'].get('customer_email') is not None",
+      "on_success": null,
+      "on_failure": null,
+      "retry_count": 3,
+      "timeout": 30
+    }
+  ],
+  "enabled": true,
+  "created_at": "2026-02-09T18:30:00",
+  "last_executed": "2026-02-09T20:51:02.293643",
+  "execution_count": 1
+}

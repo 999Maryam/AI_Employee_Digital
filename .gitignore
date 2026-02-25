@@ -1,0 +1,37 @@
+# Sensitive credentials
+credentials.json
+token.json
+.env
+*.json.secret
+secrets.md
+storage_state.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Node.js
+node_modules/
+package-lock.json
+
+# OS junk files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-02-09T20:51:02.247264",
+  "session_id": "663a2878a65a9498",
+  "actor": "AI_Employee",
+  "action": "email_draft_created",
+  "target": "email:customer@example.com",
+  "status": "pending_approval",
+  "approval_status": "pending",
+  "details": {
+    "subject": "Invoice {{event.data.invoice_number}} - ${{event.data.amount}}"
+  },
+  "error": null,
+  "duration_ms": null,
+  "security_level": "confidential"
+}
