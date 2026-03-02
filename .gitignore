@@ -35,3 +35,9 @@ package-lock.json
 # OS junk files
 .DS_Store
 Thumbs.db
+
+# Social Media Automation
+session/
+Logs/*.log
+Logs/*.png
+*.log
